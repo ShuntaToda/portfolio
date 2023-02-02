@@ -16,11 +16,12 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Noto+Serif+Khojki:wght@700&display=swap"
             rel="stylesheet"
           ></link>
+          {/* font-family: 'Noto Serif Khojki', serif; */}
           <link
-            href="https://fonts.googleapis.com/css2?family=Noto+Serif+Khojki:wght@700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic&display=swap"
             rel="stylesheet"
           ></link>
-          {/* font-family: 'Noto Serif Khojki', serif; */}
+          {/* font-family: 'BIZ UDGothic', sans-serif; */}
         </Head>
         <body className="custom_class">
           <Main />

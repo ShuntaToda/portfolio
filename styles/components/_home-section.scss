@@ -1,0 +1,154 @@
+.c-home-section {
+  &__title {
+    position: relative;
+    display: inline-block;
+    > h2 {
+      position: relative;
+      display: inline;
+      font-size: 5rem;
+      text-transform: uppercase;
+      padding-left: 50px;
+      z-index: 999;
+    }
+
+    &-left {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      translate: 0 -50%;
+      font-size: 1.3rem;
+      writing-mode: vertical-rl;
+      font-weight: bold;
+    }
+
+    &-bar {
+      width: 0;
+      height: 30px;
+      position: absolute;
+      bottom: 0;
+      left: 50px;
+      display: block;
+      transition: 1.5s;
+      transition-delay: 1.3s;
+      &.red {
+        background-color: $profile-color;
+      }
+      &.blue {
+        background-color: $works-color;
+      }
+      &.green {
+        background-color: $skills-color;
+      }
+
+      &.active {
+        width: 100%;
+      }
+    }
+  }
+
+  &__content {
+    padding: 40px 50px;
+
+    &-inner {
+      border: 5px solid $theme-color;
+      height: 100%;
+      position: relative;
+    }
+
+    &-other {
+      position: absolute;
+      left: 50%;
+      bottom: -30px;
+      translate: -50%;
+      font-weight: bold;
+    }
+  }
+
+  &__button {
+    z-index: 999;
+    position: fixed;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 50%;
+    cursor: pointer;
+    &.profile {
+      height: 200px;
+      width: 200px;
+      top: 0;
+      left: 50%;
+      translate: -50% -80%;
+      transition: 0.7s;
+      background-color: $profile-color;
+      & > span {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        translate: -50%;
+        cursor: pointer;
+      }
+
+      &:hover {
+        translate: -50% -60%;
+        background-color: #ff0000dc;
+      }
+
+      &.none {
+        top: -200px;
+      }
+    }
+
+    &.works {
+      height: 200px;
+      width: 200px;
+      top: 100%;
+      left: 0;
+      translate: -55% -45%;
+      transition: 0.7s;
+      background-color: $works-color;
+      & > span {
+        position: absolute;
+        top: 30%;
+        right: 25%;
+        translate: 50% -50%;
+        cursor: pointer;
+      }
+
+      &:hover {
+        translate: -40% -60%;
+        background-color: #0059ffdc;
+      }
+
+      &.none {
+        top: calc(100% + 200px);
+        left: -200px;
+      }
+    }
+
+    &.skills {
+      height: 200px;
+      width: 200px;
+      top: 100%;
+      right: 0;
+      translate: 55% -45%;
+      transition: 0.7s;
+      background-color: $skills-color;
+      & > span {
+        position: absolute;
+        top: 30%;
+        left: 25%;
+        translate: -50% -50%;
+        cursor: pointer;
+      }
+
+      &:hover {
+        translate: 40% -60%;
+        background-color: #b3ff00dc;
+      }
+
+      &.none {
+        top: calc(100% + 200px);
+        left: calc(100% + 200px);
+      }
+    }
+  }
+}

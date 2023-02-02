@@ -1,1 +1,19 @@
+$theme-color: #222;
+$text-font: "BIZ UDGothic", sans-serif;
+$header-font: "Noto Serif Khojki", serif;
+$primary: #222;
+
+body {
+  font-family: "BIZ UDGothic", sans-serif;
+}
+
+$profile-color: #ff0000b3;
+$works-color: #0059ffb3;
+$skills-color: #b3ff00b3;
+
 @import "components/loading";
+@import "components/logo";
+@import "components/home-section";
+@import "components/utility/header-font";
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
