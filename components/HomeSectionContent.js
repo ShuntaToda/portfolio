@@ -18,7 +18,7 @@ export const HomeSectionContent = ({ logoHeight, titleHeight, mode, section, blo
             {mode == "works" ? (
               <div className="c-works">
                 {selectedBlogs.map((blog) => (
-                  <Link href={`blog/${blog.id}`} className={"text-decoration-none"}>
+                  <Link key={blog.id} href={`blog/${blog.id}`} className={"text-decoration-none"}>
                     {console.log(blog)}
                     <div className="c-works__content shadow">
                       <div className="c-works__content-image">
@@ -38,6 +38,7 @@ export const HomeSectionContent = ({ logoHeight, titleHeight, mode, section, blo
               <>
                 {selectedBlogs.map((blog) => (
                   <div
+                    key={blog.id}
                     dangerouslySetInnerHTML={{
                       __html: `${blog.content}`,
                     }}
