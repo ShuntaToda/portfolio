@@ -10,7 +10,9 @@ export const HomeSectionTitle = ({ mode, sectionColor, setTitleHeight, section }
   }
 
   useEffect(() => {
-    setTitleHeight(title.current.getBoundingClientRect().height);
+    if (setTitleHeight) {
+      setTitleHeight(title.current.getBoundingClientRect().height);
+    }
   }, [title]);
   return (
     <>

@@ -3,7 +3,7 @@ import { HomeSectionButton } from "./HomeSectionButton";
 import { HomeSectionContent } from "./HomeSectionContent";
 import { HomeSectionTitle } from "./HomeSectionTitle";
 
-const HomeSection = ({ mode, section, setSection, logoHeight }) => {
+const HomeSection = ({ mode, section, setSection, logoHeight, blogs }) => {
   const [titleHeight, setTitleHeight] = useState(0);
 
   let sectionColor = "red";
@@ -73,6 +73,7 @@ const HomeSection = ({ mode, section, setSection, logoHeight }) => {
         titleHeight={titleHeight}
         section={section}
         mode={mode}
+        blogs={blogs}
       ></HomeSectionContent>
       <HomeSectionButton mode={mode} section={section} setSection={setSection}></HomeSectionButton>
     </div>

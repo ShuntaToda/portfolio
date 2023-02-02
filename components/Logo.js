@@ -4,7 +4,9 @@ import React, { useEffect, useRef } from "react";
 const Logo = ({ setLogoHeight }) => {
   const logo = useRef(null);
   useEffect(() => {
-    setLogoHeight(logo.current.getBoundingClientRect().height);
+    if (setLogoHeight) {
+      setLogoHeight(logo.current.getBoundingClientRect().height);
+    }
   }, [logo]);
   return (
     <div className="c-logo" ref={logo}>

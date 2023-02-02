@@ -1,0 +1,22 @@
+.c-section-content {
+  padding: 20px 30px;
+  overflow-y: auto;
+  height: 100%;
+  position: relative;
+
+  &__blur {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    &.top {
+      top: 0;
+      left: 0;
+      background: linear-gradient(to top, rgba(255, 255, 255, 0), white);
+    }
+    &.bottom {
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white);
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
