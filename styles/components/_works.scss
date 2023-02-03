@@ -17,6 +17,7 @@
     background: linear-gradient(to bottom right, rgb(243, 243, 243), rgb(229, 244, 255));
     border: 3px solid $theme-color;
     transition: 1s;
+    margin: 10px;
     &:hover {
       scale: 1.1;
     }
