@@ -19,7 +19,6 @@ export const HomeSectionContent = ({ logoHeight, titleHeight, mode, section, blo
               <div className="c-works">
                 {selectedBlogs.map((blog) => (
                   <Link key={blog.id} href={`blog/${blog.id}`} className={"text-decoration-none"}>
-                    {console.log(blog)}
                     <div className="c-works__content shadow">
                       <div className="c-works__content-image">
                         {blog.eyecatch ? (
