@@ -10,7 +10,7 @@ export default function Home({ blogs }) {
   const [logoHeight, setLogoHeight] = useState(0);
   return (
     <div>
-      <Loading></Loading>
+      {/* <Loading></Loading> */}
       <Logo setLogoHeight={setLogoHeight}></Logo>
       <HomeSection
         mode="profile"
