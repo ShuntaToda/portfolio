@@ -22,12 +22,16 @@ export const HomeSectionContent = ({ logoHeight, titleHeight, mode, section, blo
                     {console.log(blog)}
                     <div className="c-works__content shadow">
                       <div className="c-works__content-image">
-                        <Image
-                          src={blog.eyecatch.url}
-                          width={blog.eyecatch.width / 3}
-                          height={blog.eyecatch.height / 3}
-                          alt={"blog-eyecatch"}
-                        ></Image>
+                        {blog.eyecatch ? (
+                          <Image
+                            src={blog.eyecatch.url}
+                            width={blog.eyecatch.width / 3}
+                            height={blog.eyecatch.height / 3}
+                            alt={"blog-eyecatch"}
+                          ></Image>
+                        ) : (
+                          <></>
+                        )}
                       </div>
                       <div className="c-works__content-title">{blog.title}</div>
                     </div>
