@@ -1,0 +1,27 @@
+.c-blog {
+  > h2 {
+    display: inline-block;
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 50%;
+      height: 3px;
+      background-color: $works-color;
+      top: 100%;
+      left: 50%;
+      translate: -50%;
+    }
+  }
+  > p {
+    margin-bottom: 50px;
+  }
+
+  &__homelink {
+    padding: 20px 0 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

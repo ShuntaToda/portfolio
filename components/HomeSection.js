@@ -67,6 +67,7 @@ const HomeSection = ({ mode, section, setSection, logoHeight, blogs }) => {
         section={section}
         sectionColor={sectionColor}
         setTitleHeight={setTitleHeight}
+        isPage={true}
       ></HomeSectionTitle>
       <HomeSectionContent
         logoHeight={logoHeight}

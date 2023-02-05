@@ -1,12 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 
-export const HomeSectionTitle = ({ mode, sectionColor, setTitleHeight, section }) => {
+export const HomeSectionTitle = ({ mode, sectionColor, setTitleHeight, section, isPage }) => {
   const title = useRef(null);
   let page = "PAGE1";
-  if (mode == "works") {
-    page = "PAGE2";
-  } else if (mode == "skills") {
-    page = "PAGE3";
+  if (isPage) {
+    if (mode == "works") {
+      page = "PAGE2";
+    } else if (mode == "skills") {
+      page = "PAGE3";
+    }
   }
 
   useEffect(() => {
