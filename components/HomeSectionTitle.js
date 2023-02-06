@@ -22,9 +22,9 @@ export const HomeSectionTitle = ({ mode, sectionColor, setTitleHeight, section, 
         <div className="c-home-section__title">
           <span className="c-home-section__title-left">{page}</span>
           <span
-            className={`c-home-section__title-bar ${sectionColor} ${
-              mode == section ? "active" : ""
-            }`}
+            className={`c-home-section__title-bar ${sectionColor} ${mode == section ? "active" : ""}
+              ${mode == "work" ? "active" : ""}
+            `}
           ></span>
           <h2 className="">{mode}</h2>
         </div>

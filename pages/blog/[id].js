@@ -14,7 +14,7 @@ export default function BlogId({ blog }) {
     <>
       <Logo></Logo>
       <HomeSectionTitle
-        mode={"works"}
+        mode={"work"}
         sectionColor={"blue"}
         section={"works"}
         isPage={false}
