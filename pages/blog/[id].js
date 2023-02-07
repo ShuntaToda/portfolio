@@ -6,8 +6,6 @@ import { HomeSectionTitle } from "../../components/HomeSectionTitle";
 import Link from "next/link";
 import dayjs from "dayjs";
 export default function BlogId({ blog }) {
-  console.log(blog);
-
   const day = dayjs(blog.createdAt);
 
   return (
@@ -45,7 +43,7 @@ export default function BlogId({ blog }) {
 }
 
 export const getStaticPaths = async () => {
-  const data = await client.get({ endpoint: "blogs" });
+  const data = await client.get({ endpoint: "blogs", queries: { limit: 200 } });
 
   const paths = data.contents.map((content) => `/blog/${content.id}`);
   return { paths, fallback: false };
