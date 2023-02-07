@@ -5,7 +5,7 @@ import React, { useEffect, useRef, useState } from "react";
 export const HomeSectionContent = ({ logoHeight, titleHeight, mode, section, blogs }) => {
   const [windowHeight, setWindowHeight] = useState(0);
   const selectedBlogs = blogs.filter((blog) => blog.category.name == mode);
-  const [openGroup, setOpenGroup] = useState("");
+  const [openGroup, setOpenGroup] = useState([""]);
   useEffect(() => {
     // 画面の高さ - ロゴの高さ - タイトルの高さ = contentの高さ
     setWindowHeight(window.innerHeight - logoHeight - titleHeight);
@@ -13,10 +13,10 @@ export const HomeSectionContent = ({ logoHeight, titleHeight, mode, section, blo
 
   const openGroupHandle = (blog) => {
     console.log(blog, openGroup);
-    if (openGroup == "") {
+    if (openGroup[0] == "") {
       setOpenGroup(blog.group);
     } else {
-      setOpenGroup("");
+      setOpenGroup([""]);
     }
   };
 
@@ -68,16 +68,18 @@ export const HomeSectionContent = ({ logoHeight, titleHeight, mode, section, blo
                         {blog.group_leader ? (
                           <div
                             onClick={() => openGroupHandle(blog)}
-                            className={`c-works__group ${blog.group == openGroup ? "open" : ""}`}
+                            className={`c-works__group ${
+                              blog.group[0] == openGroup[0] ? "open" : ""
+                            }`}
                           >
                             <div
                               className={`c-works__content shadow ${
-                                blog.group == openGroup ? "open" : ""
+                                blog.group[0] == openGroup[0] ? "open" : ""
                               }`}
                             >
                               <div
                                 className={`c-works__toggle ${
-                                  blog.group == openGroup ? "open" : ""
+                                  blog.group[0] == openGroup[0] ? "open" : ""
                                 }`}
                               ></div>
                               {blog.badge ? (
@@ -106,7 +108,7 @@ export const HomeSectionContent = ({ logoHeight, titleHeight, mode, section, blo
                                 )}
                               </div>
                               <div className="c-works__content-title">{blog.title}</div>
-                              {openGroup ? (
+                              {openGroup[0] == blog.group[0] ? (
                                 <>
                                   {blogs.map((childBlog) => (
                                     <>
