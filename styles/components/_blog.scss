@@ -19,6 +19,8 @@
   }
   img {
     width: 50%;
+    max-height: 400px;
+    object-fit: contain;
     @media (max-width: 1000px) {
       width: 80%;
     }
