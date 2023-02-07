@@ -94,6 +94,12 @@
         background-color: rgba(255, 115, 0, 0.808);
       }
     }
+    &-time {
+      position: absolute;
+      bottom: 0;
+      right: 10px;
+      font-size: 0.9rem;
+    }
   }
 
   &__group {

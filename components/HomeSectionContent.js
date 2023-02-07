@@ -13,10 +13,10 @@ export const HomeSectionContent = ({ logoHeight, titleHeight, mode, section, blo
 
   const openGroupHandle = (blog) => {
     console.log(blog, openGroup);
-    if (openGroup[0] == "") {
-      setOpenGroup(blog.group);
-    } else {
+    if (openGroup[0] == blog.group) {
       setOpenGroup([""]);
+    } else {
+      setOpenGroup(blog.group);
     }
   };
 
@@ -48,6 +48,7 @@ export const HomeSectionContent = ({ logoHeight, titleHeight, mode, section, blo
                           ) : (
                             <></>
                           )}
+
                           <div className="c-works__content-image">
                             {blog.eyecatch ? (
                               <Image
@@ -61,6 +62,11 @@ export const HomeSectionContent = ({ logoHeight, titleHeight, mode, section, blo
                             )}
                           </div>
                           <div className="c-works__content-title">{blog.title}</div>
+                          {blog.time ? (
+                            <div className={`c-works__content-time`}>{blog.time}</div>
+                          ) : (
+                            <></>
+                          )}
                         </div>
                       </Link>
                     ) : (
@@ -108,10 +114,15 @@ export const HomeSectionContent = ({ logoHeight, titleHeight, mode, section, blo
                                 )}
                               </div>
                               <div className="c-works__content-title">{blog.title}</div>
+                              {blog.time ? (
+                                <div className={`c-works__content-time`}>{blog.time}</div>
+                              ) : (
+                                <></>
+                              )}
                               {openGroup[0] == blog.group[0] ? (
                                 <>
                                   {blogs.map((childBlog) => (
-                                    <>
+                                    <div key={childBlog.id}>
                                       {childBlog.group[0] == blog.group[0] &&
                                       !childBlog.group_leader ? (
                                         <Link
@@ -153,7 +164,7 @@ export const HomeSectionContent = ({ logoHeight, titleHeight, mode, section, blo
                                       ) : (
                                         <></>
                                       )}
-                                    </>
+                                    </div>
                                   ))}
                                 </>
                               ) : (
