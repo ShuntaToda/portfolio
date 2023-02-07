@@ -20,6 +20,19 @@ export const HomeSectionContent = ({ logoHeight, titleHeight, mode, section, blo
                 {selectedBlogs.map((blog) => (
                   <Link key={blog.id} href={`blog/${blog.id}`} className={"text-decoration-none"}>
                     <div className="c-works__content shadow">
+                      {blog.badge ? (
+                        <div
+                          className={`c-works__content-badge badge 
+                          ${blog.badge == "作品" ? "work" : ""} 
+                          ${blog.badge == "大会" ? "compe" : ""}
+                          ${blog.badge == "イベント" ? "event" : ""}`}
+                        >
+                          {blog.badge}
+                        </div>
+                      ) : (
+                        <></>
+                      )}
+                      <div></div>
                       <div className="c-works__content-image">
                         {blog.eyecatch ? (
                           <Image

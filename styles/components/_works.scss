@@ -12,6 +12,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
     padding-top: 30px;
     padding-bottom: 20px;
     background: linear-gradient(to bottom right, rgb(243, 243, 243), rgb(229, 244, 255));
@@ -33,6 +34,22 @@
 
     &-title {
       font-size: 1.4rem;
+    }
+
+    &-badge {
+      position: absolute;
+      right: 15px;
+      top: 5px;
+      border-radius: 2px !important;
+      &.work {
+        background-color: $works-color;
+      }
+      &.event {
+        background-color: rgba(111, 204, 99, 0.904);
+      }
+      &.compe {
+        background-color: rgba(255, 115, 0, 0.808);
+      }
     }
   }
 }
