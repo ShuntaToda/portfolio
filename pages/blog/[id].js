@@ -23,7 +23,7 @@ export default function BlogId({ blog }) {
             <h1>{blog.title}</h1>
           </div>
           <div className="c-works-blog__createdAt">
-            <span className="">{day.format("YYYY/MM/DD")}</span>
+            {blog.time ? <span>{blog.time}</span> : <></>}
           </div>
           <div
             className="c-blog"
