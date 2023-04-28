@@ -105,8 +105,8 @@ export const HomeSectionContent = ({ logoHeight, titleHeight, mode, section, blo
                                 {blog.eyecatch ? (
                                   <Image
                                     src={blog.eyecatch.url}
-                                    width={blog.eyecatch.width / 3}
-                                    height={blog.eyecatch.height / 3}
+                                    width={blog.eyecatch.width / 5}
+                                    height={blog.eyecatch.height / 5}
                                     alt={"blog-eyecatch"}
                                   ></Image>
                                 ) : (
